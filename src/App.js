@@ -8,7 +8,7 @@ import "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
-import { formatRelative } from "date-fns";
+// import { formatRelative } from "date-fns";
 
 firebase.initializeApp({
   // config
@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>😄</h1>
+        <h1>Welcome to Our Chat! 😄</h1>
         <SignOut />
       </header>
       <section>{user ? <ChatRoom /> : <SignIn />}</section>
@@ -112,7 +112,7 @@ function ChatRoom() {
 }
 
 function ChatMessage(props) {
-  const { text, uid, photoURL, createdAt, displayName } = props.message;
+  const { text, uid, photoURL } = props.message;
 
   const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
 
@@ -121,6 +121,7 @@ function ChatMessage(props) {
       <div className={`message ${messageClass}`}>
         <img
           src={photoURL || "https://www.gravatar.com/avatar?r=pg&d=robohash"}
+          alt="user profile"
         />
         <p>{text}</p>
         {/* <div>
