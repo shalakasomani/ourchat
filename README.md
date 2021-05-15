@@ -1,3 +1,8 @@
+# A real time chat app using React and Firebase
+Live demo: https://xenodochial-wescoff-155bbb.netlify.app/ 
+
+<img width="790" alt="Screenshot 2021-05-15 at 2 58 18 PM" src="https://user-images.githubusercontent.com/9452651/118355535-1eb39080-b58e-11eb-90fd-48827a257522.png">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
